@@ -23,36 +23,6 @@ body {
     max-width: 800px;
 }
 
-/* Zone de prévisualisation */
-#preview-zone {
-    width: 750px;
-    height: 100px;
-    position: relative;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#preview-piece {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    transition: left 0.2s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    border: 3px solid rgba(255,255,255,0.3);
-}
-
-#preview-piece.red {
-    background-color: #ff4757;
-}
-
-#preview-piece.yellow {
-    background-color: #feca57;
-}
-
 #puissance4 {
     max-width: 750px;
     display: grid;
@@ -88,13 +58,13 @@ body {
 .cell.red {
     background-color: #ff4757;
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
+    box-shadow: 0 0 10px #ff475780;
 }
 
 .cell.yellow {
     background-color: #feca57;
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(254, 202, 87, 0.5);
+    box-shadow: 0 0 10px #feca5780;
 }
 
 /* Animation de chute */
@@ -147,15 +117,6 @@ body {
         max-width: 100%;
     }
     
-    /* Masquer la zone de prévisualisation sur tablettes et mobiles */
-    #preview-zone {
-        display: none;
-    }
-    
-    #preview-piece {
-        display: none;
-    }
-    
     #puissance4 {
         max-width: 560px;
         grid-template-columns: repeat(7, 65px);
@@ -193,8 +154,6 @@ body {
         padding: 0 5px;
     }
     
-    /* La zone de prévisualisation est déjà masquée par la media query précédente */
-    
     #puissance4 {
         max-width: 350px;
         grid-template-columns: repeat(7, 45px);
@@ -221,7 +180,6 @@ body {
 
 /* Très petits écrans (360px et moins) */
 @media (max-width: 360px) {
-    /* La zone de prévisualisation est déjà masquée par les media queries précédentes */
     
     #puissance4 {
         max-width: 315px;
@@ -260,8 +218,6 @@ body {
         padding-top: 10px;
     }
     
-    /* La zone de prévisualisation est déjà masquée par les media queries précédentes */
-    
     #puissance4 {
         max-width: 420px;
         grid-template-columns: repeat(7, 50px);
@@ -288,7 +244,6 @@ body {
 
 /* Très petits écrans en paysage */
 @media (max-width: 480px) and (max-height: 400px) and (orientation: landscape) {
-    /* La zone de prévisualisation est déjà masquée par les media queries précédentes */
     
     #puissance4 {
         max-width: 350px;
